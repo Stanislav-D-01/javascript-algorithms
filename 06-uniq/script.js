@@ -9,8 +9,19 @@
 
 function uniq(arr) {
     // Напишите код здесь
+    
+    let newarr=[];
+  for (let i=0; i<arr.length; i++){
+    let bool =false;
+    for (let y=0; y<arr.length-i-1; y++) {
+        if (arr[y] === arr[arr.length-1-i]){
+        bool = true;
+    } 
+    };
+    if (bool === false) {newarr.unshift(arr[arr.length-1-i])}
 }
-
+return newarr;
+};
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
 console.log(uniq([1, 2, 5, 4, 2])); // [1, 2, 5, 4]

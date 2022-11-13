@@ -8,6 +8,26 @@
 
 function primes(num) {
     // Напишите код здесь
+    const arr =[];
+    const arrPrime = [];
+    for (let i=0; i<num; i++){
+        arr[i] = i+1;
+    };
+
+    for (i=0; i<num;i++){
+        bool = true;
+        arr.forEach(element => {
+            if ((arr[i] !== element) && (element !== 1)){
+                if (arr[i]%element === 0){
+                    bool=false;
+                }
+            }
+            });
+            if ((bool === true) && (arr[i]>1)){
+            arrPrime.push(arr[i])};
+        };
+    
+    return arrPrime;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

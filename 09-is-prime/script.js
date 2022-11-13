@@ -11,6 +11,21 @@
 
 function isPrime(n) {
     // Напишите код здесь
+    const arr1 = [0];
+    for (let i=0; i<n; i++){
+        arr1[i] = i+2
+    }
+    bool = true;
+    arr1.forEach(element => {
+        if (element !== n){
+            if (n%element === 0){bool=false}
+        }
+    });
+    if (n===2){return true;}
+    if ((n===0) ||(n===1)) {return false}
+    return bool;
+
+  
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

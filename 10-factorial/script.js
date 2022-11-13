@@ -8,7 +8,14 @@
 */
 
 function factorial(n) {
-    // Напишите код здесь
+      const arr = [];
+    for (i=0; i<n;i++){
+        arr[i]=i+1;
+    }
+    return arr.reduce( (prevValue, elem) =>{
+        return elem * prevValue;
+    }, 1)
+   
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

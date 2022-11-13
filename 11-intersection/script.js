@@ -9,6 +9,18 @@
 
 function intersection(arr1, arr2) {
     // Напишите код здесь
+
+    let arr3=[];
+arr1.forEach(elem=>{
+    let bool = false;
+    if (!arr3.includes(elem)) {
+    arr2.forEach(elem2=>{
+       if (elem === elem2){bool = true}
+    })
+    if (bool === true){arr3.unshift(elem)}
+    }
+})
+return arr3
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

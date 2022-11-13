@@ -9,9 +9,24 @@
 */
 
 function anagram(str1, str2) {
-    // Напишите код здесь
-}
+    str1 = str1.toLowerCase();
+    str2 = str2.toLowerCase();
+    arr1 = str1.split('') ;
+    arr2 = str2.split('');
+    let result;
+    let result1 = true
+    if ((arr1.length === arr2.length) && (str1 !== str2)) {
+        arr1.forEach(element => {
+        let result = arr2.some(element2 =>{
+           return arr2.includes(element)
+        })
+        result1 = (result1 && result);
+    });
 
+
+return result1;
+} else return false;
+}
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
 console.log(anagram('finder', 'Friend')); // true

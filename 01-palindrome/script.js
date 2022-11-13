@@ -15,17 +15,17 @@
 
 function palindrome(str) {
     // Напишите код здесь
-    let stroka='';
-    for (let p=0; p<str.length; p++){
-        if(str[p]!==' ' && str[p]!==',' && str[p]!=='!' && str[p]!=='?'){stroka=stroka+str[p]}
+    let stringSymbal='';
+    for (let i=0; i<str.length; i++){
+        if(str[i]!==' ' && str[i]!==',' && str[i]!=='!' && str[i]!=='?'){stringSymbal = stringSymbal+str[i]}
     };
 
-    stroka = stroka.toLowerCase();
- for (let i=0; i<stroka.length; i+=1){
+    let stringSmall = stringSymbal.toLowerCase();
+ for (let i=0; i<stringSmall.length; i+=1){
    if (i===0){
-    if ((stroka.slice((-1) - i  )) !== stroka[i]){return false};
+    if ((stringSmall.slice((-1) - i  )) !== stringSmall[i]){return false};
    }
-    else {if ((stroka.slice((-1) - i , (-1) - i+1 )) !== stroka[i]){return false}}   
+    else {if ((stringSmall.slice((-1) - i , (-1) - i+1 )) !== stringSmall[i]){return false}}   
     }
     
     return true;  

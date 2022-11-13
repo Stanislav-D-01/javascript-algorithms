@@ -8,9 +8,24 @@
 
 function countZeros(n) {
     // Напишите код здесь
-}
+        let arr = [];
+    for (let i=0; i<n;i++){
+        arr[i]=i+1;
+    }
+    let numZero = 0;
+    let arr2 = [];
+    arr.forEach(elem => {
+        arr2 = String(elem).split('');
+        arr2.forEach(elem2=>{
+            if (elem2 === '0'){
+            numZero++} 
+        });       
+        });
+        return (numZero);
+
+};
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
-console.log(countZeros(20)); // 2 – два нуля, по одному в числах 10 и 20
+console.log(countZeros(342)); // 2 – два нуля, по одному в числах 10 и 20
 console.log(countZeros(100)); // 11 – 11 нулей в числах: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
