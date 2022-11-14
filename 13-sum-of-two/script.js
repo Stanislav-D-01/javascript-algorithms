@@ -10,12 +10,12 @@
 
 function sumOfTwo(arr, sum) {
     // Напишите код здесь
-    let bool = false;
-    for (i1 = 0; i1<arr.length-1; i1++){
-        for (i2 = 0; i2<arr.length-1; i2++){
-            if (i1 !== i2){
-                if ((arr[i1]+arr[i2]) === sum){
-                    bool = true;
+    let condition = false;
+    for (let i = 0; i < arr.length-1; i++){
+        for (k = 0; k < arr.length-1; k++){
+            if (i !== k){
+                if ((arr[i] + arr[k]) === sum){
+                    condition = true;
                     break;
                 }
             }
@@ -23,7 +23,7 @@ function sumOfTwo(arr, sum) {
 
 
     }
-return (bool);
+return (condition);
 
 
 }

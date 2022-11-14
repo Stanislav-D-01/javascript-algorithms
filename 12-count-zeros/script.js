@@ -8,15 +8,15 @@
 
 function countZeros(n) {
     // Напишите код здесь
-        let arr = [];
-    for (let i=0; i<n;i++){
-        arr[i]=i+1;
+    const arr = [];
+    for (let i = 0; i < n;i++){
+        arr[i] = i + 1;
     }
     let numZero = 0;
-    let arr2 = [];
+    let arr2 = [];    //c const не работает, т.к массив постоянно переназначается в 18 строке.
     arr.forEach(elem => {
         arr2 = String(elem).split('');
-        arr2.forEach(elem2=>{
+        arr2.forEach(elem2 => {
             if (elem2 === '0'){
             numZero++} 
         });       

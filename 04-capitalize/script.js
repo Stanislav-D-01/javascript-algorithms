@@ -8,15 +8,15 @@
 
 function capitalize(str) {
     const arr = str.split(' ');
-    for (let i=0; i<arr.length; i++) {
-        while (arr[i]===""){
+    for (let i = 0; i < arr.length; i++) {
+        while (arr[i] === ""){
             arr.splice (i, 1)
         }
     }
 
 
 
-    str = arr.map ((item)=>{
+    str = arr.map ((item) => {
       return item[0].toUpperCase() + item.slice(1);
      }).join(' ');
     return str;

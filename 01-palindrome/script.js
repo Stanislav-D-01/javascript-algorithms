@@ -16,13 +16,13 @@
 function palindrome(str) {
     // Напишите код здесь
     let stringSymbal='';
-    for (let i=0; i<str.length; i++){
-        if(str[i]!==' ' && str[i]!==',' && str[i]!=='!' && str[i]!=='?'){stringSymbal = stringSymbal+str[i]}
+    for (let i = 0; i < str.length; i++){
+        if(str[i] !== ' ' && str[i] !== ',' && str[i] !== '!' && str[i] !== '?'){stringSymbal = stringSymbal+str[i]}
     };
 
-    let stringSmall = stringSymbal.toLowerCase();
- for (let i=0; i<stringSmall.length; i+=1){
-   if (i===0){
+    const stringSmall = stringSymbal.toLowerCase();
+ for (let i = 0; i<stringSmall.length; i++){
+   if (i === 0){
     if ((stringSmall.slice((-1) - i  )) !== stringSmall[i]){return false};
    }
     else {if ((stringSmall.slice((-1) - i , (-1) - i+1 )) !== stringSmall[i]){return false}}   

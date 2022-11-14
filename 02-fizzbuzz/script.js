@@ -13,11 +13,11 @@
 function fizzBuzz(num) {
     if ((typeof num === 'number') && (num >= 1)){
     const arr = [];
-    for (let i=1; i<=num; i++){
+    for (let i = 1; i <= num; i++){
         arr.push(i);
    }
    
-    arr.forEach((elem)=>{
+    arr.forEach((elem) => {
     if ((elem % 3 === 0) && (elem % 5 === 0)){
         console.log('fizzbuzz');
     } else if ((elem % 3 === 0)){

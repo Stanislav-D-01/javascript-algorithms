@@ -11,20 +11,20 @@
 function anagram(str1, str2) {
     str1 = str1.toLowerCase();
     str2 = str2.toLowerCase();
-    arr1 = str1.split('') ;
-    arr2 = str2.split('');
-    let result;
-    let result1 = true
+    const arr1 = str1.split('') ;
+    const arr2 = str2.split('');
+    let check;
+    let checkTrue = true
     if ((arr1.length === arr2.length) && (str1 !== str2)) {
         arr1.forEach(element => {
-        let result = arr2.some(element2 =>{
+           check = arr2.some(element2 =>{
            return arr2.includes(element)
         })
-        result1 = (result1 && result);
+        checkTrue = (checkTrue && check);
     });
 
 
-return result1;
+return checkTrue;
 } else return false;
 }
 // Протестируйте решение, вызывая функцию с разными аргументами:

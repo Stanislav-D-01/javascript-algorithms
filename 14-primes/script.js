@@ -8,22 +8,22 @@
 
 function primes(num) {
     // Напишите код здесь
-    const arr =[];
+    const arr = [];
     const arrPrime = [];
-    for (let i=0; i<num; i++){
-        arr[i] = i+1;
+    for (let i = 0; i < num; i++){
+        arr[i] = i + 1;
     };
 
-    for (i=0; i<num;i++){
-        bool = true;
+    for (i = 0; i < num; i++){
+        check = true;
         arr.forEach(element => {
             if ((arr[i] !== element) && (element !== 1)){
-                if (arr[i]%element === 0){
-                    bool=false;
+                if (arr[i] % element === 0){
+                    check = false;
                 }
             }
             });
-            if ((bool === true) && (arr[i]>1)){
+            if ((check === true) && (arr[i] > 1)){
             arrPrime.push(arr[i])};
         };
     

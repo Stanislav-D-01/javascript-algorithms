@@ -9,8 +9,8 @@
 
 function factorial(n) {
       const arr = [];
-    for (i=0; i<n;i++){
-        arr[i]=i+1;
+    for (let i = 0; i < n; i++){
+        arr[i] = i + 1;
     }
     return arr.reduce( (prevValue, elem) =>{
         return elem * prevValue;

@@ -10,14 +10,14 @@
 function intersection(arr1, arr2) {
     // Напишите код здесь
 
-    let arr3=[];
-arr1.forEach(elem=>{
-    let bool = false;
+    const arr3 = [];
+    arr1.forEach(elem => {
+    let repeatValue = false;
     if (!arr3.includes(elem)) {
-    arr2.forEach(elem2=>{
-       if (elem === elem2){bool = true}
+    arr2.forEach(elem2 => {
+       if (elem === elem2){repeatValue = true}
     })
-    if (bool === true){arr3.unshift(elem)}
+    if (repeatValue === true){arr3.unshift(elem)}
     }
 })
 return arr3

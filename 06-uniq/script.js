@@ -10,17 +10,17 @@
 function uniq(arr) {
     // Напишите код здесь
     
-    let newarr=[];
-  for (let i=0; i<arr.length; i++){
-    let bool =false;
-    for (let y=0; y<arr.length-i-1; y++) {
+    const newArr=[];
+  for (let i = 0; i < arr.length; i++){
+    let repeatValue = false;
+    for (let y = 0; y < arr.length-i-1; y++) {
         if (arr[y] === arr[arr.length-1-i]){
-        bool = true;
+        repeatValue = true;
     } 
     };
-    if (bool === false) {newarr.unshift(arr[arr.length-1-i])}
+    if (repeatValue === false) {newArr.unshift(arr[arr.length-1-i])}
 }
-return newarr;
+return newArr;
 };
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
